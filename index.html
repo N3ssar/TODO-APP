@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Todo App | Task Management</title>
+  <meta name="title" content="تطبيق المهام | Todo App - إدارة مهامك بسهولة">
+  <meta name="description"
+    content="تطبيق مهام سهل الاستخدام يساعدك في إدارة مهامك اليومية وتنظيم وقتك بشكل فعال. قم بإضافة وتتبع وإكمال مهامك بكل سهولة." />
+  <meta name="keywords" content="تطبيق مهام, todo app, إدارة المهام, تنظيم الوقت, قائمة المهام, تطبيق عربي" />
+  <meta name="author" content="Mohamed Abusrea" /> <!-- Or your name -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.com/" /> <!-- Replace with your actual domain -->
+  <meta property="og:title" content="تطبيق المهام | Todo App - إدارة مهامك بسهولة" />
+  <meta property="og:description"
+    content="تطبيق مهام سهل الاستخدام يساعدك في إدارة مهامك اليومية وتنظيم وقتك بشكل فعال. قم بإضافة وتتبع وإكمال مهامك بكل سهولة." />
+  <meta property="og:image" content="https://your-domain.com/assets/og-image.jpg" />
+  <!-- Replace with your actual image path -->
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://your-domain.com/" /> <!-- Replace with your actual domain -->
+  <meta property="twitter:title" content="تطبيق المهام | Todo App - إدارة مهامك بسهولة" />
+  <meta property="twitter:description"
+    content="تطبيق مهام سهل الاستخدام يساعدك في إدارة مهامك اليومية وتنظيم وقتك بشكل فعال. قم بإضافة وتتبع وإكمال مهامك بكل سهولة." />
+  <meta property="twitter:image" content="https://your-domain.com/assets/og-image.jpg" />
+  <!-- Replace with your actual image path -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/images/favicon.ico" /> <!-- Ensure path is correct -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png" />
+  <!-- Ensure path is correct -->
+
+  <!-- Styles --> <!-- Or styles.css if you compile SCSS -->
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "تطبيق المهام | Todo App",
+      "description": "تطبيق مهام سهل الاستخدام يساعدك في إدارة مهامك اليومية وتنظيم وقتك بشكل فعال",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  </script>
+  <script type="module" crossorigin src="/assets/index-BAYUcyz2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DDaCVjHd.css">
+</head>
+
+<body>
+  <main class="App">
+    <header class="Header">
+      <button class="DarkThemeToggle">
+        <span class="DarkThemeToggle__activate">تفعيل</span>
+        <span class="DarkThemeToggle__deactivate">إيقاف</span>
+        _الوضع_الليلي
+      </button>
+      <div class="SocialLinks">
+        <a href="https://web.facebook.com/muhammadahmednassar" target="_blank" rel="noopener noreferrer">
+          <img class="SocialLinks__img" src="/images/facebook-svgrepo-com.svg" alt="facebook icon" />
+        </a>
+        <a href="https://x.com/MuhmdANassar" target="_blank" rel="noopener noreferrer">
+          <img class="SocialLinks__img" src="/images/twitter-svgrepo-com.svg" alt="twitter icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-ahmad-nassar/" target="_blank" rel="noopener noreferrer">
+          <img class="SocialLinks__img" src="/images/linkedin-svgrepo-com.svg" alt="linkedin icon" />
+        </a>
+        <a href="https://github.com/N3ssar" target="_blank" rel="noopener noreferrer">
+          <img class="SocialLinks__img" src="/images/github-svgrepo-com.svg" alt="github icon" />
+        </a>
+      </div>
+    </header>
+
+    <div class="App__wrapper">
+      <div class="TaskSearchBar">
+        <label for="search-input" class="TaskSearchBar__label"> قائمة المهام </label>
+        <form class="TaskSearchBar__searchContent">
+          <input id="search-input" class="TaskSearchBar__input" type="text" placeholder="قم بإضافة مهمة..." />
+          <button class="TaskSearchBar__button" type="submit">إضافة</button> <!-- Added type="submit" for clarity -->
+        </form>
+      </div>
+
+      <div class="TaskList">
+        <!-- This button would be for toggling completed tasks, needs JS implementation -->
+        <button class="TaskList__link">
+          <span class="show">إظهار</span><span class="hide">إخفاء</span> المهام المكتملة
+        </button>
+        <ul class="TaskList__list">
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Popup for Validation Messages -->
+  <!-- This should be outside the main .App content if you want it to overlay everything,
+       or inside if you want it to be part of the .App scrolling (less common for modals)
+       Placing it as a direct child of <body> is common for true modal behavior. -->
+  <div class="Popup" id="validationPopup"> <!-- ID for JS targeting -->
+    <div class="Popup__content">
+      <p id="popupMessage"></p> <!-- ID for JS to insert message -->
+      <button id="closePopupBtn">فهمت</button> <!-- ID for JS to attach close event -->
+    </div>
+  </div>
+  <!-- Popup for Delete Confirmation -->
+  <div class="Popup" id="deleteConfirmPopup">
+    <div class="Popup__content">
+      <p id="deleteConfirmMessage">هل أنت متأكد من حذف هذه المهمة؟</p>
+      <div class="Popup__actions">
+        <button id="confirmDeleteBtn" class="Button Button--danger">نعم، احذف</button>
+        <button id="cancelDeleteBtn" class="Button Button--secondary">إلغاء</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
